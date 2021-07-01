@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 23:48:10 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 00:04:48 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 09:18:35 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,6 @@ FragTrap::FragTrap(FragTrap const& cl)
 void		FragTrap::display(std::ostream& stream) const
 {
 	stream << "Frag-TP " << _name << " has " << _hitPoints << " hit points, " << _energyPoints << " energy points and " << _attackDamage << " attack dammage.";
-}
-
-void 		FragTrap::attack(std::string const& target)
-{
-	if (_energyPoints >= 5)
-	{
-		std::cout << "Frag-TP " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage! "<< std::endl;
-		_energyPoints -= 5;
-	}
-	else
-		std::cout << "Not enough enery points" << std::endl;
 }
 
 void		FragTrap::highFivesGuys()

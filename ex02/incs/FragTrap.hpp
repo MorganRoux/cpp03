@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 23:45:22 by mroux             #+#    #+#             */
-/*   Updated: 2021/07/01 00:03:39 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 09:18:21 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class FragTrap : public ClapTrap
 		~FragTrap();
 		FragTrap(FragTrap const&);
 		void		display(std::ostream& stream) const;
-		void 		attack(std::string const& target);
 		void		highFivesGuys();
 
 	protected:
