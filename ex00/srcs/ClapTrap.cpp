@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Claptrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 22:14:14 by mroux             #+#    #+#             */
-/*   Updated: 2021/06/30 23:42:22 by mroux            ###   ########.fr       */
+/*   Updated: 2021/07/01 09:08:50 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void 		ClapTrap::attack(std::string const& target)
 
 void 		ClapTrap::takeDamage(unsigned int amount)
 {
+	std::cout <<  "FR4G-TP " << _name << " take " << amount << " damages." << std::endl;
 	_hitPoints = amount > _hitPoints ? 0 : _hitPoints - amount;
 	if (_hitPoints == 0)
 		std::cout << _name << " is dead." << std::endl;
@@ -79,6 +80,7 @@ void 		ClapTrap::takeDamage(unsigned int amount)
 
 void		ClapTrap::beRepaired(unsigned int amount)
 {
+	std::cout <<  "FR4G-TP " << _name << "is repaired of " << amount << " points." << std::endl;
 	_hitPoints = _hitPoints + amount > _maxHitPoints ? _maxHitPoints : _hitPoints + amount;
 	_energyPoints = _energyPoints + amount > _maxEnergyPoints ? _maxEnergyPoints : _energyPoints + amount;
 }
